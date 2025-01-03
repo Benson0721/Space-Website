@@ -16,7 +16,7 @@
   position: relative;
 }
 .crew__bg {
-  background-image: url("./assets/crew/background-crew-mobile.jpg");
+  background-image: url("./crew/background-crew-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -72,7 +72,7 @@
 
 @media only screen and (min-width: 768px) {
   .crew__bg {
-    background-image: url("./assets/crew/background-crew-tablet.jpg");
+    background-image: url("./crew/background-crew-tablet.jpg");
   }
   .crew__textfield {
     max-width: 512px;
@@ -87,7 +87,7 @@
     max-width: 1600px;
   }
   .crew__bg {
-    background-image: url("./assets/crew/background-crew-desktop.jpg");
+    background-image: url("./crew/background-crew-desktop.jpg");
   }
   .crew__main {
     -webkit-box-orient: horizontal;
