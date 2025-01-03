@@ -29,7 +29,7 @@ export default function Technology() {
     toggleVisibility(false);
     setTimeout(() => {
       setCurrentTech(index);
-    }, 900); // Duration of the fade-out transition
+    }, 1000); // Duration of the fade-out transition
   };
 
   const upperName = name.toUpperCase();

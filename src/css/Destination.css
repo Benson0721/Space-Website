@@ -57,12 +57,8 @@
   max-width: 327px;
 }
 .destination__planet {
-  max-width: 150px;
-  max-height: 150px;
-}
-.destination__planet img {
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
 }
 .destination__travel {
   display: -webkit-box;
@@ -99,8 +95,8 @@
     background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
   .destination__planet {
-    max-width: 300px;
-    max-height: 300px;
+    width: 300px;
+    height: 300px;
   }
   .destination__textfield {
     max-width: 514px;
@@ -127,8 +123,8 @@
     background-image: url("../../assets/destination/background-destination-desktop.jpg");
   }
   .destination__planet {
-    max-width: 480px;
-    max-height: 480px;
+    width: 700px;
+    height: 700px;
   }
   .destination__textfield {
     max-width: 445px;

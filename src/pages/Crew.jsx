@@ -28,7 +28,7 @@ export default function Crew() {
     toggleVisibility(false);
     setTimeout(() => {
       setCurrentCrew(index);
-    }, 900); // Duration of the fade-out transition
+    }, 1000); // Duration of the fade-out transition
   };
 
   const { name, images, role, bio } = crew[currentCrew];

@@ -6,6 +6,7 @@ import "../css/Animation.css";
 import { Header2 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
+import PlanetCanvas from "../components/Planet";
 
 export default function Destination() {
   const [currentPlanet, setCurrentPlanet] = useState(0);
@@ -15,7 +16,7 @@ export default function Destination() {
     toggleVisibility(false);
     setTimeout(() => {
       setCurrentPlanet(index);
-    }, 900); // Duration of the fade-out transition
+    }, 1000); // Duration of the fade-out transition
   };
 
   const { name, images, description, distance, travel } =
@@ -40,7 +41,7 @@ export default function Destination() {
               visible ? "" : "fade-out"
             }`}
           >
-            <img src={images.webp} alt={name} className="rotate" />
+            <PlanetCanvas planetTexture={images.jpg} />
           </figure>
           <div className="destination__textfield">
             <PlanetNavigation
@@ -82,3 +83,5 @@ export default function Destination() {
     </div>
   );
 }
+
+/*            <img src={images.webp} alt={name} className="rotate" /> */

@@ -1,11 +1,9 @@
 export function Header1({ data, visible }) {
   return (
     <h1
-      className={`text-[80px] md:text-[144px] text-white lg:text-left mb-6 space fade-controller ${
-        visible ? "" : "fade-out"
-      }`}
+      className={`text-[80px] md:text-[144px] text-white lg:text-left mb-6 space `}
     >
-    {data}
+      {data}
     </h1>
   );
 }

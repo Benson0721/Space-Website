@@ -9,20 +9,20 @@
           animation: fade-in 0.5s forwards;
 }
 .fade-controller:nth-child(1) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.fade-controller:nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-.fade-controller:nth-child(3) {
+.fade-controller:nth-child(2) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.fade-controller:nth-child(4) {
+.fade-controller:nth-child(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
+}
+.fade-controller:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .fade-controller.fade-out {
@@ -31,20 +31,20 @@
           animation: fade-out 0.5s forwards;
 }
 .fade-controller.fade-out:nth-child(1) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.fade-controller.fade-out:nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-.fade-controller.fade-out:nth-child(3) {
+.fade-controller.fade-out:nth-child(2) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.fade-controller.fade-out:nth-child(4) {
+.fade-controller.fade-out:nth-child(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
+}
+.fade-controller.fade-out:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .rotate {
