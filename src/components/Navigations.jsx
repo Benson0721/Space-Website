@@ -32,7 +32,7 @@ export function StageNavigation() {
       <a href="/">
         <img
           className="navigation__logo"
-          src="../../assets/shared/logo.svg"
+          src="./assets/shared/logo.svg"
           alt="logo"
         />
       </a>
@@ -45,7 +45,7 @@ export function StageNavigation() {
         className={`ml-auto z-30 ${listOpen ? "hidden" : "block"} md:hidden`}
       >
         <img
-          src="../../assets/shared/icon-hamburger.svg"
+          src="./assets/shared/icon-hamburger.svg"
           alt="hamburger-button"
         />
       </button>
@@ -60,7 +60,7 @@ export function StageNavigation() {
             setListOpen(false);
           }}
         >
-          <img src="../../assets/shared/icon-close.svg" alt="close_nav" />
+          <img src="./assets/shared/icon-close.svg" alt="close_nav" />
         </button>
         <ul className="navigation__list__items">
           <li>

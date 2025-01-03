@@ -47,9 +47,9 @@ const Planet = ({ planetTexture, planetSize }) => {
 const PlanetCanvas = ({ planetTexture }) => {
   return (
     <Canvas style={{ width: "100%", height: "100%" }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-      <Planet planetTexture={planetTexture} />
+      <ambientLight intensity={0.2} />
+      <directionalLight position={[5, 5, 5]} intensity={1.5} />
+      <Planet planetTexture={planetTexture} receiveShadow castShadow />
     </Canvas>
   );
 };

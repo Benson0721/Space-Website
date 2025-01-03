@@ -16,7 +16,7 @@
   position: relative;
 }
 .tech__bg {
-  background-image: url("../../assets/technology/background-technology-mobile.jpg");
+  background-image: url("./assets/technology/background-technology-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -69,7 +69,7 @@
 
 @media only screen and (min-width: 768px) {
   .tech__bg {
-    background-image: url("../../assets/technology/background-technology-tablet.jpg");
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
   }
   .tech__main {
     padding: 40px;
@@ -88,7 +88,7 @@
     max-width: 1600px;
   }
   .tech__bg {
-    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
   }
   .tech__main {
     -webkit-box-orient: horizontal;

@@ -16,7 +16,7 @@
   position: relative;
 }
 .home__bg {
-  background-image: url("../../assets/home/background-home-mobile.jpg");
+  background-image: url("./assets/home/background-home-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -96,7 +96,7 @@
     padding: 65px 40px;
   }
   .home__bg {
-    background-image: url("../../assets/home/background-home-tablet.jpg");
+    background-image: url("./assets/home/background-home-tablet.jpg");
   }
   .home__button {
     width: 272px;
@@ -115,7 +115,7 @@
     max-width: 1600px;
   }
   .home__bg {
-    background-image: url("../../assets/home/background-home-desktop.jpg");
+    background-image: url("./assets/home/background-home-desktop.jpg");
   }
   .home__textfield {
     -webkit-box-align: start;
