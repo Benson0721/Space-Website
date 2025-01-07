@@ -1,0 +1,94 @@
+.destination {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  &__bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+  &__textfield {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 327px;
+  }
+  &__planet {
+    width: 150px;
+    height: 150px;
+  }
+  &__travel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.travel-line {
+  position: absolute;
+  bottom: 220px;
+  left: 0px;
+  border: 0.1px solid white;
+  z-index: 30;
+  width: 100%;
+  opacity: 0.25;
+}
+
+@media only screen and (min-width: 768px) {
+  .destination {
+    padding: 24px;
+
+    &__planet {
+      width: 300px;
+      height: 300px;
+    }
+    &__textfield {
+      max-width: 514px;
+    }
+    &__travel {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .travel-line {
+    bottom: 107px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .destination {
+    padding: 24px;
+    max-width: 1600px;
+
+    &__planet {
+      width: 700px;
+      height: 700px;
+    }
+    &__textfield {
+      max-width: 445px;
+    }
+    &__main {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      justify-content: space-around;
+    }
+  }
+}

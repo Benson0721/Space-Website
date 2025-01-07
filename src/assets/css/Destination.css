@@ -16,7 +16,6 @@
   position: relative;
 }
 .destination__bg {
-  background-image: url("../assets/destination/background-destination-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -91,9 +90,6 @@
   .destination {
     padding: 24px;
   }
-  .destination__bg {
-    background-image: url("../assets/destination/background-destination-tablet.jpg");
-  }
   .destination__planet {
     width: 300px;
     height: 300px;
@@ -118,9 +114,6 @@
   .destination {
     padding: 24px;
     max-width: 1600px;
-  }
-  .destination__bg {
-    background-image: url("../assets/destination/background-destination-desktop.jpg");
   }
   .destination__planet {
     width: 700px;

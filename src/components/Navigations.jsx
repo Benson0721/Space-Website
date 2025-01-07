@@ -1,7 +1,11 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../css/Navigations.css";
+import "../assets/css/Navigations.css";
 import TouchContext from "../hooks/touchContent";
+
+import logo from "../assets/images/shared/logo.svg";
+import hamburger from "../assets/images/shared/icon-hamburger.svg";
+import close from "../assets/images/shared/icon-close.svg";
 
 export function StageNavigation() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -11,6 +15,7 @@ export function StageNavigation() {
   const navigate = useNavigate();
 
   const handleNavigation = (position) => {
+    touchHandler();
     setTimeout(() => {
       navigate(position);
     }, 500);
@@ -39,11 +44,7 @@ export function StageNavigation() {
   return (
     <div className="navigation">
       <a href="/">
-        <img
-          className="navigation__logo"
-          src="./src/assets/shared/logo.svg"
-          alt="logo"
-        />
+        <img className="navigation__logo" src={logo} alt="logo" />
       </a>
       <hr className="star-line hidden lg:inline-block"></hr>
       <button
@@ -53,10 +54,7 @@ export function StageNavigation() {
         }}
         className={`ml-auto z-30 ${listOpen ? "hidden" : "block"} md:hidden`}
       >
-        <img
-          src="./src/assets/shared/icon-hamburger.svg"
-          alt="hamburger-button"
-        />
+        <img src={hamburger} alt="hamburger-button" />
       </button>
       <nav
         className={`navigation__list ml-auto md:ml-0 z-20 ${
@@ -69,15 +67,10 @@ export function StageNavigation() {
             setListOpen(false);
           }}
         >
-          <img src="./src/assets/shared/icon-close.svg" alt="close_nav" />
+          <img src={close} alt="close_nav" />
         </button>
         <ul className="navigation__list__items">
-          <li
-            onClick={() => {
-              handleNavigation("/");
-              touchHandler();
-            }}
-          >
+          <li onClick={() => handleNavigation("/")}>
             <p
               className={`navigation__list__item lg:ml-5  ${
                 currentPage === "home" ? "active" : ""
@@ -89,12 +82,7 @@ export function StageNavigation() {
               HOME
             </p>
           </li>
-          <li
-            onClick={() => {
-              handleNavigation("/destination");
-              touchHandler();
-            }}
-          >
+          <li onClick={() => handleNavigation("/destination")}>
             <p
               className={`navigation__list__item  ${
                 currentPage === "destination" ? "active" : ""
@@ -103,12 +91,7 @@ export function StageNavigation() {
               <span className="font-bold pr-3">01</span>DESTINATION
             </p>
           </li>
-          <li
-            onClick={() => {
-              handleNavigation("/crew");
-              touchHandler();
-            }}
-          >
+          <li onClick={() => handleNavigation("/crew")}>
             <p
               className={`navigation__list__item  ${
                 currentPage === "crew" ? "active" : ""
@@ -117,12 +100,7 @@ export function StageNavigation() {
               <span className="font-bold pr-3">02</span>CREW
             </p>
           </li>
-          <li
-            onClick={() => {
-              handleNavigation("/technology");
-              touchHandler();
-            }}
-          >
+          <li onClick={() => handleNavigation("/technology")}>
             <p
               className={`navigation__list__item ${
                 currentPage === "technology" ? "active" : ""

@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from "react";
-import { destinations } from "../../data.json";
+import { destinations } from "../assets/data/data.json";
 import { StageNavigation, PlanetNavigation } from "../components/Navigations";
-import "../css/Destination.css";
-import "../css/Animation.css";
+import "../assets/css/Destination.css";
+import "../assets/css/Animation.css";
 import { Header2 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
@@ -28,7 +28,7 @@ export default function Destination() {
   const upperTra = travel.toUpperCase();
 
   return (
-    <div className="destination__bg">
+    <div className="destination__bg bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop">
       <StageNavigation />
       <div className={`destination ${hasTouch ? "fade-out" : ""}`}>
         <div

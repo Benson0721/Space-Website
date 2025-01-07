@@ -1,4 +1,4 @@
-.crew {
+.tech {
   padding: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,15 +15,14 @@
           flex-direction: column;
   position: relative;
 }
-.crew__bg {
-  background-image: url("../assets/crew/background-crew-mobile.jpg");
+.tech__bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100%;
 }
-.crew__main {
+.tech__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +38,7 @@
           align-items: center;
   padding: 24px;
 }
-.crew__textfield {
+.tech__textfield {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,41 +54,36 @@
       -ms-flex-align: center;
           align-items: center;
   max-width: 327px;
-  height: 319px;
+  height: 243px;
 }
-.crew__person {
-  max-width: 271px;
-  max-height: 340px;
+.tech__image {
+  width: 373px;
+  height: 258px;
+  margin-bottom: 32px;
 }
-.crew__person img {
+.tech__image img {
   width: 100%;
   height: 100%;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(transparent));
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(transparent));
-          mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 @media only screen and (min-width: 768px) {
-  .crew__bg {
-    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  .tech__main {
+    padding: 40px;
   }
-  .crew__textfield {
+  .tech__textfield {
     max-width: 512px;
   }
-  .crew__person {
-    max-width: 447px;
-    max-height: 560px;
+  .tech__image {
+    width: 120%;
+    height: 357px;
+    overflow: hidden;
   }
 }
 @media only screen and (min-width: 1440px) {
-  .crew {
+  .tech {
     max-width: 1600px;
   }
-  .crew__bg {
-    background-image: url("../assets/crew/background-crew-desktop.jpg");
-  }
-  .crew__main {
+  .tech__main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -97,17 +91,29 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 1440px;
   }
-  .crew__textfield {
+  .tech__textfield {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-width: 539px;
-    height: 480px;
+    width: 539px;
+    height: 243px;
+    margin: 0px 84px;
   }
-  .crew__person {
-    max-width: 539px;
-    max-height: 676px;
+  .tech__image {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 608px;
+    height: 600px;
+    margin-bottom: 0px;
+    margin-right: -5vw;
   }
-}/*# sourceMappingURL=Crew.css.map */
+}/*# sourceMappingURL=Technology.css.map */

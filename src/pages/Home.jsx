@@ -1,6 +1,6 @@
 import { StageNavigation } from "../components/Navigations";
-import "../css/home.css";
-import "../css/Animation.css";
+import "../assets/css/home.css";
+import "../assets/css/Animation.css";
 import { SloganText1, InnerTypedText } from "../components/Textfields";
 import { Header1 } from "../components/Headers";
 import { useNavigate } from "react-router-dom";
@@ -10,9 +10,15 @@ import { useContext } from "react";
 export default function Home() {
   const { hasTouch, touchHandler } = useContext(TouchContext);
   const navigate = useNavigate();
+  const handleNavigation = (position) => {
+    touchHandler();
+    setTimeout(() => {
+      navigate(position);
+    }, 500);
+  };
   return (
     <>
-      <div className="home__bg">
+      <div className="home__bg bg-home-mobile md:bg-home-tablet lg:bg-home-desktop">
         <StageNavigation />
         <div className={`home z-0  ${hasTouch ? "fade-out" : ""}`}>
           <div className="home__main transition">
@@ -27,12 +33,7 @@ export default function Home() {
             </div>
             <button
               className="home__button z-10 "
-              onClick={() => {
-                touchHandler();
-                setTimeout(() => {
-                  navigate("/destination");
-                }, 600);
-              }}
+              onClick={() => handleNavigation("/destination")}
             >
               <p className="text-[18px] md:text-[32px] text-Blue-900">
                 EXPLORE

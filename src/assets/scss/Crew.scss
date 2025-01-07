@@ -1,0 +1,78 @@
+.crew {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  &__bg {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+  &__textfield {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 327px;
+    height: 319px;
+  }
+  &__person {
+    max-width: 271px;
+    max-height: 340px;
+    img {
+      width: 100%;
+      height: 100%;
+      mask-image: linear-gradient(
+        to bottom,
+        black 70%,
+        transparent 100%
+      ); //bottom transpatent
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .crew {
+
+    &__textfield {
+      max-width: 512px;
+    }
+    &__person {
+      max-width: 447px;
+      max-height: 560px;
+    }
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .crew {
+    max-width: 1600px;
+
+    &__main {
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 1440px;
+    }
+    &__textfield {
+      align-items: flex-start;
+      max-width: 539px;
+      height: 480px;
+    }
+    &__person {
+      max-width: 539px;
+      max-height: 676px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { crew } from "../../data.json";
+import { crew } from "../assets/data/data.json";
 import { StageNavigation, CrewNavigation } from "../components/Navigations";
-import "../css/Crew.css";
-import "../css/Animation.css";
+import "../assets/css/Crew.css";
+import "../assets/css/Animation.css";
 import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
@@ -12,7 +12,7 @@ export default function Crew() {
   const [currentCrew, setCurrentCrew] = useState(0);
   const [visible, toggleVisibility] = useFadeToggle();
   const { hasTouch } = useContext(TouchContext);
-  
+
   useEffect(() => {
     const id = setInterval(() => {
       handleCrewChange((prevIndex) => {
@@ -38,7 +38,7 @@ export default function Crew() {
   const upperRole = role.toUpperCase();
   return (
     <>
-      <div className="crew__bg">
+      <div className="crew__bg bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop">
         <StageNavigation />
         <div className={`crew ${hasTouch ? "fade-out" : ""}`}>
           <div className="crew__process mb-6 md:mr-auto md:ml-8">

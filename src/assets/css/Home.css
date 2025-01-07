@@ -31,7 +31,6 @@
           align-items: center;
 }
 .home__bg {
-  background-image: url("../assets/home/background-home-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -110,9 +109,6 @@
   .home {
     padding: 65px 40px;
   }
-  .home__bg {
-    background-image: url("../assets/home/background-home-tablet.jpg");
-  }
   .home__button {
     width: 272px;
     height: 272px;
@@ -138,9 +134,6 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     width: 1440px;
-  }
-  .home__bg {
-    background-image: url("../assets/home/background-home-desktop.jpg");
   }
   .home__textfield {
     -webkit-box-align: start;

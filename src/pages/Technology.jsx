@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { technology } from "../../data.json";
+import { technology } from "../assets/data/data.json";
 import { StageNavigation, TechNavigation } from "../components/Navigations";
-import "../css/Technology.css";
-import "../css/Animation.css";
+import "../assets/css/Technology.css";
+import "../assets/css/Animation.css";
 import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
@@ -38,7 +38,7 @@ export default function Technology() {
 
   return (
     <>
-      <div className="tech__bg">
+      <div className="tech__bg bg-technology-mobile md:bg-technology-tablet lg:bg-technology-desktop">
         <StageNavigation />
         <div className={`tech ${hasTouch ? "fade-out" : ""}`}>
           <div className="tech__process mb-6 md:mr-auto md:ml-8">
