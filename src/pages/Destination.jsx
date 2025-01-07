@@ -43,6 +43,13 @@ export default function Destination() {
             }`}
           >
             <PlanetCanvas planetTexture={images.jpg} />
+            <p class="attribution text-white">
+              Planet texture by
+              <a href="https://www.artstation.com/zeit/store" target="_blank">
+                Maxime Galland
+              </a>
+              .
+            </p>
           </figure>
           <div className="destination__textfield">
             <PlanetNavigation
