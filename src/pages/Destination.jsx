@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { destinations } from "../../data.json";
 import { StageNavigation, PlanetNavigation } from "../components/Navigations";
 import "../css/Destination.css";
@@ -7,11 +7,12 @@ import { Header2 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
 import PlanetCanvas from "../components/Planet";
+import TouchContext from "../hooks/touchContent";
 
 export default function Destination() {
   const [currentPlanet, setCurrentPlanet] = useState(0);
   const [visible, toggleVisibility] = useFadeToggle();
-
+  const { hasTouch } = useContext(TouchContext);
   const handlePlanetChange = (index) => {
     toggleVisibility(false);
     setTimeout(() => {
@@ -29,7 +30,7 @@ export default function Destination() {
   return (
     <div className="destination__bg">
       <StageNavigation />
-      <div className="destination">
+      <div className={`destination ${hasTouch ? "fade-out" : ""}`}>
         <div
           className={`destination__process mb-6 md:mr-auto md:ml-8 transition `}
         >

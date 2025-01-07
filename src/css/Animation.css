@@ -3,6 +3,11 @@
           animation: identifier 1.5s;
 }
 
+.fade-out {
+  -webkit-animation: fade-out 0.5s forwards;
+          animation: fade-out 0.5s forwards;
+}
+
 .fade-controller {
   opacity: 0;
   -webkit-animation: fade-in 0.5s forwards;
@@ -128,4 +133,4 @@
   100% {
     opacity: 0;
   }
-}/*# sourceMappingURL=animation.css.map */
+}/*# sourceMappingURL=Animation.css.map */

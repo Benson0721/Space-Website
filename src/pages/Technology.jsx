@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { technology } from "../../data.json";
 import { StageNavigation, TechNavigation } from "../components/Navigations";
 import "../css/Technology.css";
@@ -6,11 +6,13 @@ import "../css/Animation.css";
 import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
+import TouchContext from "../hooks/touchContent";
 
 export default function Technology() {
   const [currentTech, setCurrentTech] = useState(0);
   const { name, images, description } = technology[currentTech];
   const [visible, toggleVisibility] = useFadeToggle();
+  const { hasTouch } = useContext(TouchContext);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -38,7 +40,7 @@ export default function Technology() {
     <>
       <div className="tech__bg">
         <StageNavigation />
-        <div className="tech">
+        <div className={`tech ${hasTouch ? "fade-out" : ""}`}>
           <div className="tech__process mb-6 md:mr-auto md:ml-8">
             <SloganText2 data={"SPACE LAUNCH 101"} process={"03"} />
           </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { crew } from "../../data.json";
 import { StageNavigation, CrewNavigation } from "../components/Navigations";
 import "../css/Crew.css";
@@ -6,11 +6,13 @@ import "../css/Animation.css";
 import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
+import TouchContext from "../hooks/touchContent";
 
 export default function Crew() {
   const [currentCrew, setCurrentCrew] = useState(0);
   const [visible, toggleVisibility] = useFadeToggle();
-
+  const { hasTouch } = useContext(TouchContext);
+  
   useEffect(() => {
     const id = setInterval(() => {
       handleCrewChange((prevIndex) => {
@@ -38,7 +40,7 @@ export default function Crew() {
     <>
       <div className="crew__bg">
         <StageNavigation />
-        <div className="crew">
+        <div className={`crew ${hasTouch ? "fade-out" : ""}`}>
           <div className="crew__process mb-6 md:mr-auto md:ml-8">
             <SloganText2 data={"MEET YOUR CREW"} process={"02"} />
           </div>

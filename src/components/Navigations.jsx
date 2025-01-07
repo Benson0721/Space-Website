@@ -1,11 +1,20 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../css/Navigations.css";
+import TouchContext from "../hooks/touchContent";
 
 export function StageNavigation() {
   const [currentPage, setCurrentPage] = useState("home");
   const [listOpen, setListOpen] = useState(false);
+  const { touchHandler } = useContext(TouchContext);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigation = (position) => {
+    setTimeout(() => {
+      navigate(position);
+    }, 500);
+  };
 
   useEffect(() => {
     const path = location.pathname;
@@ -32,7 +41,7 @@ export function StageNavigation() {
       <a href="/">
         <img
           className="navigation__logo"
-          src="./assets/shared/logo.svg"
+          src="./src/assets/shared/logo.svg"
           alt="logo"
         />
       </a>
@@ -45,7 +54,7 @@ export function StageNavigation() {
         className={`ml-auto z-30 ${listOpen ? "hidden" : "block"} md:hidden`}
       >
         <img
-          src="./assets/shared/icon-hamburger.svg"
+          src="./src/assets/shared/icon-hamburger.svg"
           alt="hamburger-button"
         />
       </button>
@@ -60,55 +69,67 @@ export function StageNavigation() {
             setListOpen(false);
           }}
         >
-          <img src="./assets/shared/icon-close.svg" alt="close_nav" />
+          <img src="./src/assets/shared/icon-close.svg" alt="close_nav" />
         </button>
         <ul className="navigation__list__items">
-          <li>
-            <Link to="/">
-              <p
-                className={`navigation__list__item lg:ml-5  ${
-                  currentPage === "home" ? "active" : ""
-                }`}
-              >
-                <span className="font-bold pr-3 md:hidden lg:inline-block">
-                  00
-                </span>
-                HOME
-              </p>
-            </Link>
+          <li
+            onClick={() => {
+              handleNavigation("/");
+              touchHandler();
+            }}
+          >
+            <p
+              className={`navigation__list__item lg:ml-5  ${
+                currentPage === "home" ? "active" : ""
+              }`}
+            >
+              <span className="font-bold pr-3 md:hidden lg:inline-block">
+                00
+              </span>
+              HOME
+            </p>
           </li>
-          <li>
-            <Link to="/destination">
-              <p
-                className={`navigation__list__item  ${
-                  currentPage === "destination" ? "active" : ""
-                }`}
-              >
-                <span className="font-bold pr-3">01</span>DESTINATION
-              </p>
-            </Link>
+          <li
+            onClick={() => {
+              handleNavigation("/destination");
+              touchHandler();
+            }}
+          >
+            <p
+              className={`navigation__list__item  ${
+                currentPage === "destination" ? "active" : ""
+              }`}
+            >
+              <span className="font-bold pr-3">01</span>DESTINATION
+            </p>
           </li>
-          <li>
-            <Link to="/crew">
-              <p
-                className={`navigation__list__item  ${
-                  currentPage === "crew" ? "active" : ""
-                }`}
-              >
-                <span className="font-bold pr-3">02</span>CREW
-              </p>
-            </Link>
+          <li
+            onClick={() => {
+              handleNavigation("/crew");
+              touchHandler();
+            }}
+          >
+            <p
+              className={`navigation__list__item  ${
+                currentPage === "crew" ? "active" : ""
+              }`}
+            >
+              <span className="font-bold pr-3">02</span>CREW
+            </p>
           </li>
-          <li>
-            <Link to="/technology">
-              <p
-                className={`navigation__list__item ${
-                  currentPage === "technology" ? "active" : ""
-                }`}
-              >
-                <span className="font-bold pr-3">03</span>TECHNOLOGY
-              </p>
-            </Link>
+          <li
+            onClick={() => {
+              handleNavigation("/technology");
+              touchHandler();
+            }}
+          >
+            <p
+              className={`navigation__list__item ${
+                currentPage === "technology" ? "active" : ""
+              }`}
+            >
+              <span className="font-bold pr-3">03</span>TECHNOLOGY
+            </p>
           </li>
         </ul>
       </nav>
@@ -178,7 +199,6 @@ export function PlanetNavigation({ currentPlanet, setCurrentPlanet }) {
 }
 
 export function CrewNavigation({ currentCrew, setCurrentCrew }) {
-
   return (
     <nav className="crewNav mt-auto z-10  mb-8">
       <ul className="crewNav__list">
