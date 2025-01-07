@@ -3,7 +3,7 @@ import "../css/home.css";
 import "../css/Animation.css";
 import { SloganText1, InnerTypedText } from "../components/Textfields";
 import { Header1 } from "../components/Headers";
-
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
@@ -20,11 +20,11 @@ export default function Home() {
             />
           </div>
           <button className="home__button z-10">
-            <a href="/destination">
+            <Link to={"/destination"}>
               <p className="text-[18px] md:text-[32px] text-Blue-900">
                 EXPLORE
               </p>
-            </a>
+            </Link>
           </button>
         </div>
       </div>
