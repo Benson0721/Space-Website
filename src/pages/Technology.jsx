@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { technology } from "../assets/data/data.json";
 import { StageNavigation, TechNavigation } from "../components/Navigations";
-import "../assets/css/Technology.css";
-import "../assets/css/Animation.css";
+import "../assets/scss/Technology.scss";
+import "../assets/scss/Animation.scss";
 import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";

@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { destinations } from "../assets/data/data.json";
 import { StageNavigation, PlanetNavigation } from "../components/Navigations";
-import "../assets/css/Destination.css";
-import "../assets/css/Animation.css";
+import "../assets/scss/Destination.scss";
+import "../assets/scss/Animation.scss";
 import { Header2 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";

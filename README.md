@@ -29,11 +29,11 @@ Users should be able to:
 ### Screenshot
 
 -layout
-![](./screenshot_desktop.jpeg)
-![](./screenshot_mobile.jpeg)
-![](./screenshot_tablet.jpeg)
+![](./display/screenshot_desktop.jpeg)
+![](./display/screenshot_mobile.jpeg)
+![](./display/screenshot_tablet.jpeg)
 -website tour
-![](./tour.mp4)
+![](./display/tour.mp4)
 
 ### Links
 

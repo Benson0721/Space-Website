@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../assets/css/Navigations.css";
+import "../assets/scss/Navigations.scss";
 import TouchContext from "../hooks/touchContent";
 
 import logo from "../assets/images/shared/logo.svg";

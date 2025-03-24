@@ -1,6 +1,6 @@
 import { StageNavigation } from "../components/Navigations";
-import "../assets/css/home.css";
-import "../assets/css/Animation.css";
+import "../assets/scss/home.scss";
+import "../assets/scss/Animation.scss";
 import { SloganText1, InnerTypedText } from "../components/Textfields";
 import { Header1 } from "../components/Headers";
 import { useNavigate } from "react-router-dom";

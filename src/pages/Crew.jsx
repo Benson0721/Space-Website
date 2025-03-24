@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { crew } from "../assets/data/data.json";
 import { StageNavigation, CrewNavigation } from "../components/Navigations";
-import "../assets/css/Crew.css";
-import "../assets/css/Animation.css";
+import "../assets/scss/Crew.scss";
+import "../assets/scss/Animation.scss";
 import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
