@@ -22,7 +22,7 @@ export default function Home() {
         <StageNavigation />
         <div className={`home z-0  ${hasTouch ? "fade-out" : ""}`}>
           <div className="home__main transition">
-            <div className="home__textfield ">
+            <div className="home__textfield">
               <SloganText1 data={"SO, YOU WANT TO TRAVEL TO"} />
               <Header1 data={"SPACE"} />
               <InnerTypedText

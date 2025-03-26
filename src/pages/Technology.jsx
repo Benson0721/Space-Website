@@ -7,10 +7,22 @@ import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
 import TouchContext from "../hooks/touchContent";
+import techLand1 from "../assets/images/technology/image-launch-vehicle-landscape.jpg";
+import techPort1 from "../assets/images/technology/image-launch-vehicle-portrait.jpg";
+import techLand2 from "../assets/images/technology/image-space-capsule-landscape.jpg";
+import techPort2 from "../assets/images/technology/image-space-capsule-portrait.jpg";
+import techLand3 from "../assets/images/technology/image-spaceport-landscape.jpg";
+import techPort3 from "../assets/images/technology/image-spaceport-portrait.jpg";
+
+const techImages = [
+  { landscape: techLand1, portrait: techPort1 }, // currentTech = 0
+  { landscape: techLand2, portrait: techPort2 }, // currentTech = 1
+  { landscape: techLand3, portrait: techPort3 }, // currentTech = 2
+];
 
 export default function Technology() {
-  const [currentTech, setCurrentTech] = useState(0);
-  const { name, images, description } = technology[currentTech];
+  const [currentTech, setCurrentTech] = useState(1);
+  const { name, description } = technology[currentTech];
   const [visible, toggleVisibility] = useFadeToggle();
   const { hasTouch } = useContext(TouchContext);
 
@@ -31,7 +43,7 @@ export default function Technology() {
     toggleVisibility(false);
     setTimeout(() => {
       setCurrentTech(index);
-    }, 1000); // Duration of the fade-out transition
+    }, 1000);
   };
 
   const upperName = name.toUpperCase();
@@ -51,15 +63,21 @@ export default function Technology() {
                 visible ? "" : "fade-out"
               }`}
             >
-              <source media="(min-width: 1440px)" srcSet={images.portrait} />
-              <source media="(min-width: 768px)" srcSet={images.landscape} />
-              <img src={images.portrait} alt={name} />
+              <source
+                media="(min-width: 1440px)"
+                srcSet={techImages[currentTech].portrait}
+              />
+              <source
+                media="(min-width: 768px)"
+                srcSet={techImages[currentTech].landscape}
+              />
+              <img src={techImages[currentTech].portrait} alt={name} />
             </picture>
             <TechNavigation
               currentTech={currentTech}
               setCurrentTech={handleTechChange}
             />
-            <div className="tech__textfield ">
+            <div className="tech__textfield">
               <Header4 data={"THE TERMINOLOGY…"} visible={visible} />
               <Header3 data={upperName} visible={visible} />
               <InnerText data={description} visible={visible} />

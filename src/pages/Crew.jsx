@@ -7,11 +7,23 @@ import { Header3, Header4 } from "../components/Headers";
 import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
 import TouchContext from "../hooks/touchContent";
+import crew1 from "../assets/images/crew/image-anousheh-ansari.png";
+import crew2 from "../assets/images/crew/image-douglas-hurley.png";
+import crew3 from "../assets/images/crew/image-mark-shuttleworth.png";
+import crew4 from "../assets/images/crew/image-victor-glover.png";
 
 export default function Crew() {
   const [currentCrew, setCurrentCrew] = useState(0);
   const [visible, toggleVisibility] = useFadeToggle();
   const { hasTouch } = useContext(TouchContext);
+
+  const crewImages = [
+    { crew: crew1,  }, // currentCrew = 0
+    { crew: crew2, }, // currentCrew = 1
+    { crew: crew3,  }, // currentCrew = 2
+    { crew: crew4,  }, // currentCrew = 3
+  ];
+
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -33,7 +45,7 @@ export default function Crew() {
     }, 1000); // Duration of the fade-out transition
   };
 
-  const { name, images, role, bio } = crew[currentCrew];
+  const { name, role, bio } = crew[currentCrew];
   const upperName = name.toUpperCase();
   const upperRole = role.toUpperCase();
   return (
@@ -59,7 +71,7 @@ export default function Crew() {
                 visible ? "" : "fade-out"
               }`}
             >
-              <img src={images.webp} alt={name} />
+              <img src={crewImages[currentCrew].crew} alt={name} />
             </figure>
           </div>
         </div>

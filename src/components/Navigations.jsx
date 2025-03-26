@@ -14,6 +14,26 @@ export function StageNavigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setListOpen(true);
+      } else {
+        setListOpen(false); 
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
+
+
   const handleNavigation = (position) => {
     touchHandler();
     setTimeout(() => {
@@ -50,7 +70,6 @@ export function StageNavigation() {
       <button
         onClick={() => {
           setListOpen(true);
-          console.log(listOpen);
         }}
         className={`ml-auto z-30 ${listOpen ? "hidden" : "block"} md:hidden`}
       >
@@ -70,7 +89,7 @@ export function StageNavigation() {
           <img src={close} alt="close_nav" />
         </button>
         <ul className="navigation__list__items">
-          <li onClick={() => handleNavigation("/")}>
+          <li onClick={listOpen ? () => handleNavigation("/") : () => {}}>
             <p
               className={`navigation__list__item lg:ml-5  ${
                 currentPage === "home" ? "active" : ""
@@ -82,7 +101,7 @@ export function StageNavigation() {
               HOME
             </p>
           </li>
-          <li onClick={() => handleNavigation("/destination")}>
+          <li onClick={listOpen ? () => handleNavigation("/destination") : () => {}}>
             <p
               className={`navigation__list__item  ${
                 currentPage === "destination" ? "active" : ""
@@ -91,7 +110,7 @@ export function StageNavigation() {
               <span className="font-bold pr-3">01</span>DESTINATION
             </p>
           </li>
-          <li onClick={() => handleNavigation("/crew")}>
+          <li onClick={listOpen ? () => handleNavigation("/crew") : () => {}}>
             <p
               className={`navigation__list__item  ${
                 currentPage === "crew" ? "active" : ""
@@ -100,7 +119,7 @@ export function StageNavigation() {
               <span className="font-bold pr-3">02</span>CREW
             </p>
           </li>
-          <li onClick={() => handleNavigation("/technology")}>
+          <li onClick={listOpen ? () => handleNavigation("/technology") : () => {}}>
             <p
               className={`navigation__list__item ${
                 currentPage === "technology" ? "active" : ""

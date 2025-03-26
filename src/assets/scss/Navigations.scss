@@ -9,21 +9,27 @@
     height: 40px;
   }
   &__list {
-    opacity: 0;
+    display: none;
+    max-height: 0px;
+    max-width: 0px;
     position: absolute;
     top: 0px;
     right: 0px;
+    opacity: 0;
     width: 254px;
     height: 100vh;
     padding-left: 32px;
     backdrop-filter: blur(80px);
     background-color: rgba($color: #0b0d17, $alpha: 0.15);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: translateX(50px); /* 初始位置稍微向下 */
+    transition: max-height 0.3s ease, opacity 0.5s ease, transform 0.3s ease;
+    transform: translateX(50px); 
     &.visable {
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      display: block;
       opacity: 1;
-      transform: translateX(0px); /* 初始位置稍微向下 */
+      max-width: 254px;
+      max-height: 100vh;
+      transition: display 0.3s ease, max-height 0.3s ease, opacity 0.5s ease, transform 0.3s ease;
+      transform: translateX(0px);
     }
     &__items {
       display: flex;
@@ -146,6 +152,7 @@
       height: 48px;
     }
     &__list {
+      display: block;
       opacity: 1;
       position: static;
       width: 100%;
@@ -154,6 +161,15 @@
       transform: none;
       padding-left: 0px;
       background-color: rgba($color: white, $alpha: 0.05);
+      &.visable {
+        right: 0px;
+        opacity: 1;
+        max-width: none;
+        max-height: none;
+        visibility: visible;
+        transition: max-height 0.1s ease, visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        transform: translateX(0px); /* 初始位置稍微向下 */
+      }
       &__items {
         flex-direction: row;
       }

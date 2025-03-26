@@ -22,7 +22,7 @@ export function InnerTypedText({ data }) {
   return (
     <>
       <p
-        className="font-barlow text-[15px] md:text-[16px] lg:text-[18px] max-w-xl text-Blue-300 text-center lg:text-left mb-6"
+        className="font-barlow text-[15px] md:text-[16px] lg:text-[18px] max-w-xl text-Blue-300 text-center lg:text-left mb-6 h-28"
         ref={el}
       ></p>
     </>

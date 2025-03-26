@@ -59,7 +59,10 @@
 @media only screen and (min-width: 768px) {
   .home {
     padding: 65px 40px;
-
+    &__bg {
+      width: 100vw;
+      height: 100%;
+    }
     &__button {
       width: 272px;
       height: 272px;
@@ -72,6 +75,7 @@
     flex-direction: row;
     justify-content: space-around;
     max-width: 1600px;
+  
     &__main {
       flex-direction: row;
       justify-content: space-evenly;

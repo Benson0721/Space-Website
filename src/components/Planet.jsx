@@ -3,6 +3,8 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { OrbitControls } from "three-stdlib";
 
+
+
 const Planet = ({ planetTexture }) => {
   const planetRef = useRef();
   const { camera, gl, scene } = useThree();

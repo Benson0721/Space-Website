@@ -8,8 +8,24 @@ import { InnerText, SloganText2 } from "../components/Textfields";
 import useFadeToggle from "../hooks/useFadeToggle";
 import PlanetCanvas from "../components/Planet";
 import TouchContext from "../hooks/touchContent";
+import planet1 from "../assets/images/3Dplanets/moon.jpg";
+import planet2 from "../assets/images/3Dplanets/mars.jpg";
+import planet3 from "../assets/images/3Dplanets/europa.jpg";
+import planet4 from "../assets/images/3Dplanets/titan.jpg";
+
+
+
+
 
 export default function Destination() {
+
+  const planetImages = [
+    { planet: planet1,  }, // currentCrew = 0
+    { planet: planet2, }, // currentCrew = 1
+    { planet: planet3,  }, // currentCrew = 2
+    { planet: planet4,  }, // currentCrew = 3
+  ];
+
   const [currentPlanet, setCurrentPlanet] = useState(0);
   const [visible, toggleVisibility] = useFadeToggle();
   const { hasTouch } = useContext(TouchContext);
@@ -20,8 +36,11 @@ export default function Destination() {
     }, 1000); // Duration of the fade-out transition
   };
 
-  const { name, images, description, distance, travel } =
+  const { name, description, distance, travel } =
     destinations[currentPlanet];
+
+
+
 
   const upperName = name.toUpperCase();
   const upperDis = distance.toUpperCase();
@@ -42,7 +61,7 @@ export default function Destination() {
               visible ? "" : "fade-out"
             }`}
           >
-            <PlanetCanvas planetTexture={images.jpg} />
+            <PlanetCanvas planetTexture={planetImages[currentPlanet].planet} />
             <p class="attribution text-white">
               Planet texture by
               <a href="https://www.artstation.com/zeit/store" target="_blank">
