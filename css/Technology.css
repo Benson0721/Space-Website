@@ -19,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px;
   overflow: hidden;
 }
 .tech__textfield {
@@ -44,9 +43,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .tech {
-    padding: 24px;
-  }
   .tech__main {
     padding: 40px;
   }
