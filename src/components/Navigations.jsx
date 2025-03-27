@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate,Link } from "react-router-dom";
 import "../assets/scss/Navigations.scss";
 import TouchContext from "../hooks/touchContent";
 
@@ -17,7 +17,7 @@ export function StageNavigation() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 768) {
         setListOpen(true);
       } else {
         setListOpen(false); 
@@ -63,9 +63,9 @@ export function StageNavigation() {
 
   return (
     <div className="navigation">
-      <a href="/">
-        <img className="navigation__logo" src={logo} alt="logo" />
-      </a>
+      <Link to="/" >
+        <img className="navigation__logo md:mr-24" src={logo} alt="logo" />
+      </Link>
       <hr className="star-line hidden lg:inline-block"></hr>
       <button
         onClick={() => {

@@ -727,6 +727,10 @@ body {
   margin-top: auto;
 }
 
+.mr-24 {
+  margin-right: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -751,8 +755,8 @@ body {
   display: none;
 }
 
-.h-px {
-  height: 1px;
+.h-0 {
+  height: 0px;
 }
 
 .h-10 {
@@ -763,16 +767,16 @@ body {
   height: 5rem;
 }
 
-.h-0 {
-  height: 0px;
-}
-
 .h-24 {
   height: 6rem;
 }
 
 .h-28 {
   height: 7rem;
+}
+
+.h-px {
+  height: 1px;
 }
 
 .w-full {
@@ -1020,6 +1024,10 @@ body {
 
   .md\:mr-auto {
     margin-right: auto;
+  }
+
+  .md\:mr-24 {
+    margin-right: 6rem;
   }
 
   .md\:hidden {

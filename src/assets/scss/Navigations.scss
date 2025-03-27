@@ -155,20 +155,15 @@
       display: block;
       opacity: 1;
       position: static;
-      width: 100%;
-      max-width: 640px;
-      height: 96px;
       transform: none;
       padding-left: 0px;
       background-color: rgba($color: white, $alpha: 0.05);
       &.visable {
         right: 0px;
         opacity: 1;
-        max-width: none;
-        max-height: none;
-        visibility: visible;
-        transition: max-height 0.1s ease, visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-        transform: translateX(0px); /* 初始位置稍微向下 */
+        width: 100%;
+        height: 96px;
+        max-width: 640px;
       }
       &__items {
         flex-direction: row;
@@ -205,8 +200,13 @@
 @media only screen and (min-width: 1440px) {
   .navigation {
     &__list {
-      width: 55%;
-      max-width: none;
+      &.visable {
+        right: 0px;
+        opacity: 1;
+        width: 100%;
+        height: 96px;
+        max-width: 736px;
+      }
       &__items {
         justify-content: center;
       }

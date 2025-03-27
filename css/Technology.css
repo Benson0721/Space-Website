@@ -1,5 +1,5 @@
+@charset "UTF-8";
 .tech {
-  padding: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,8 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100); /* 動態視窗高度 */
+  height: 100%; /* 隨內容延伸 */
 }
 .tech__main {
   display: flex;
@@ -19,6 +20,7 @@
   justify-content: center;
   align-items: center;
   padding: 24px;
+  overflow: hidden;
 }
 .tech__textfield {
   position: relative;
@@ -42,6 +44,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .tech {
+    padding: 24px;
+  }
   .tech__main {
     padding: 40px;
   }
