@@ -89,6 +89,9 @@ video {
   border: 0;
   box-sizing: border-box;
 }
+body {
+  max-width: 1500px;
+}
 
 #root {
   width: 100%;
